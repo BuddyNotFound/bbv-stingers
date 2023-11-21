@@ -75,7 +75,9 @@ RegisterNetEvent('bbv-spikes:sync:client',function(data,id,pos)
     Spike = {
         position = pos
     }
-    Wrapper:Blip(SpikeProp,'Spike Strip',pos,Config.Settings.Blips.Sprite,Config.Settings.Blips.Color,Config.Settings.Blips.Scale)
+    if Config.Settings.Blips.Enabled then
+        Wrapper:Blip(SpikeProp,'Spike Strip',pos,Config.Settings.Blips.Sprite,Config.Settings.Blips.Color,Config.Settings.Blips.Scale)
+    end
     Wrapper:Target('Spike'..SpikeProp, 'Pick Up',  pos ,'removeprop:Spike'..SpikeProp, 1.5 , 1.5)
     RegisterNetEvent('removeprop:Spike'..SpikeProp,function()
         local player = PlayerId()
