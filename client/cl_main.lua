@@ -233,12 +233,13 @@ CreateThread(function()
 end)
 
 function Main:GetClosestSpike()
+    if not IsPedInAnyVehicle(PlayerPedId()) then return end
     local closestSpike = nil
     local minDistance = math.huge
 
     for k, v in pairs(Spike) do 
         local ped = PlayerPedId()
-        local mypos = GetEntityCoords(ped)
+        local mypos = GetEntityCoords(GetVehiclePedIsIn(ped))
         local spikepos = vec3(v.x,v.y,v.z)
         local dist = #(mypos - spikepos)
 
