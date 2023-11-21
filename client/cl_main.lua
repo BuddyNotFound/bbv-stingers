@@ -1,6 +1,5 @@
 Main = { 
     data = {},
-    model = 'p_ld_stinger_s'
 }
 Spike = {}
 
@@ -11,7 +10,7 @@ end)
 function Main:PlaceSpike()
     if PlacingObject then Wrapper:Notify(Lang.DoingSomething) return end
 	PlacingObject = true
-	object = Main.model
+	object = Config.Settings.SpikeModel
     CurrentSpawnRange = 15
     
     self:RequestSpawnObject(object)
