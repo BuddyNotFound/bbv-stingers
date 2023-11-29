@@ -11,7 +11,6 @@ Config.Settings = {
     ItemName = 'spikestrips', -- Name of the item.
     RemoveItem = true, -- if the item should be removed.
     ReturnItem = true, -- if the item should be given back when picked up.
-    Webhook = '', -- discord webhook used for logs.
     Blips = { -- Blips of the spikes shown on the minimap.
         Enabled = true,
         Sprite = 364,

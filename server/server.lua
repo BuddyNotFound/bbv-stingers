@@ -1,4 +1,5 @@
 Main = {Spikes = {}}
+DiscordWebHook = '' -- used for logs
 
 RegisterNetEvent('bbv-spikes:sync:server',function(CurrentCoords,heading)
     Main.Spikes[#Main.Spikes + 1] = CreateObjectNoOffset(Config.Settings.SpikeModel, CurrentCoords.x, CurrentCoords.y, CurrentCoords.z, true, true, false)
@@ -19,7 +20,7 @@ if Config.Settings.Framework == "QB" then
         local src = source
         local Player = QBCore.Functions.GetPlayer(src)
         if Player.Functions.GetItemByName(item.name) then
-            TriggerEvent('Wrapper:Log',src,Config.Settings.Webhook,'Used Spikes')
+            TriggerEvent('Wrapper:Log',src,DiscordWebHook,'Used Spikes')
             TriggerClientEvent('bbv-spikes:spike',src)
         end
     end)
@@ -28,7 +29,7 @@ end
 if Config.Settings.Framework == "ESX" then 
     ESX.RegisterUsableItem(Config.Settings.ItemName, function(source)
         local src = source
-        TriggerEvent('Wrapper:Log',src,Config.Settings.Webhook,'Used Spikes')
+        TriggerEvent('Wrapper:Log',src,DiscordWebHook,'Used Spikes')
         TriggerClientEvent('bbv-spikes:spike',src)
     end)
 end
@@ -36,7 +37,7 @@ end
 if Config.Settings.Framework == "ST" then 
     RegisterCommand(Config.Settings.ItemName, function(source)
         local src = source
-        TriggerEvent('Wrapper:Log',src,Config.Settings.Webhook,'Used Spikes')
+        TriggerEvent('Wrapper:Log',src,DiscordWebHook,'Used Spikes')
         TriggerClientEvent('bbv-spikes:spike',src)
     end)
 end
