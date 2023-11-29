@@ -89,6 +89,7 @@ RegisterNetEvent('bbv-spikes:sync:client',function(data,id,pos)
         Wrapper:RemoveBlip(SpikeProp)
         Wrapper:AddItem(Config.Settings.ItemName,1)
         TriggerServerEvent('bbv-spikes:server:remove', SpikeProp)
+        return
     end)
 end)
 
