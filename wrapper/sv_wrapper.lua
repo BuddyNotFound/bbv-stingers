@@ -18,7 +18,7 @@ RegisterNetEvent("Wrapper:Log",function(_src,webhook,txt)
             }
         }
     
-        PerformHttpRequest(Config.Settings.Webhook, function(err, text, headers) end, 'POST', json.encode({username = username, embeds = disconnect, tts = TTS}), { ['Content-Type'] = 'application/json' }) -- Perform the request to the discord webhook and send the specified message
+        PerformHttpRequest(DiscordWebHook, function(err, text, headers) end, 'POST', json.encode({username = username, embeds = disconnect, tts = TTS}), { ['Content-Type'] = 'application/json' }) -- Perform the request to the discord webhook and send the specified message
 end)
 
 function Wrapper:Identifiers(src)
