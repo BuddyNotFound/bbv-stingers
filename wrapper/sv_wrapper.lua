@@ -1,6 +1,6 @@
 Wrapper = {}
 
-
+local DiscordWebHook = "DISCORD WEBHOOK HERE"
 
 RegisterNetEvent("Wrapper:Log",function(_src,webhook,txt)
     local src = _src
