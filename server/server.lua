@@ -1,5 +1,4 @@
 Main = {Spikes = {}}
-DiscordWebHook = '' -- used for logs
 
 RegisterNetEvent('bbv-spikes:sync:server',function(CurrentCoords,heading)
     Main.Spikes[#Main.Spikes + 1] = CreateObjectNoOffset(Config.Settings.SpikeModel, CurrentCoords.x, CurrentCoords.y, CurrentCoords.z, true, true, false)
