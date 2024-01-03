@@ -11,6 +11,7 @@ Config.Settings = {
     ItemName = 'spikestrips', -- Name of the item.
     RemoveItem = true, -- if the item should be removed.
     ReturnItem = true, -- if the item should be given back when picked up.
+    MaxDistance = 15, -- Maximum distance in which can player place spikes
     Blips = { -- Blips of the spikes shown on the minimap.
         Enabled = true,
         Sprite = 364,
