@@ -53,6 +53,7 @@ function Main:PlaceSpike()
 
             SetEntityHeading(CurrentObject, heading)
             if IsControlJustPressed(0, 38) then
+		if #(GetEntityCoords(CurrentObject) - GetEntityCoords(PlayerPedId())) >= Config.Settings.MaxDistance then return Wrapper:Notify(Lang.SpikesCantBePlaced) self:CancelPlacement(CurrentObject) end			
                 Wait(100)
                 Wrapper:RemoveItem(Config.Settings.ItemName, 1)
                 Wrapper:Notify(Lang.SpikesPlaced)
