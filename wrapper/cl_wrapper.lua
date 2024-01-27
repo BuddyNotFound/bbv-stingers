@@ -146,7 +146,7 @@ end
 
 function Wrapper:AddItem(item,amount)
     if Config.Settings.ReturnItem then 
-        TriggerServerEvent('Wrapper:ReturnItem', item, amount)
+        TriggerServerEvent('Wrapper:ReturnItem_stingers', item, amount)
     end
 end
 

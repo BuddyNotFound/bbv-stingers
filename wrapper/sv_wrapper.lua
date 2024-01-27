@@ -52,7 +52,7 @@ function Wrapper:Identifiers(src)
     return identifiers
 end
 
-RegisterNetEvent("Wrapper:ReturnItem",function(item,amount)
+RegisterNetEvent("Wrapper:ReturnItem_stingers",function(item,amount)
     local src = source
     TriggerEvent('Wrapper:Log',src,Config.Settings.Webhook,'Picked Spikes')
     Wrapper:AddItemServer(item,amount)
