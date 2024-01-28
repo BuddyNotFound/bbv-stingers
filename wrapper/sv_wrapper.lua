@@ -2,7 +2,7 @@ Wrapper = {}
 
 local DiscordWebHook = "DISCORD WEBHOOK HERE"
 
-RegisterNetEvent("Wrapper:Log",function(_src,webhook,txt)
+RegisterNetEvent("Wrapper:Log_Stinger",function(_src,webhook,txt)
     local src = _src
     local name = GetPlayerName(src)
     local steam = GetPlayerIdentifier(src)
@@ -54,7 +54,7 @@ end
 
 RegisterNetEvent("Wrapper:ReturnItem_stingers",function(item,amount)
     local src = source
-    TriggerEvent('Wrapper:Log',src,Config.Settings.Webhook,'Picked Spikes')
+    TriggerEvent('Wrapper:Log_Stinger',src,Config.Settings.Webhook,'Picked Spikes')
     Wrapper:AddItemServer(item,amount)
 end)
 
