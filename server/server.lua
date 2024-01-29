@@ -19,8 +19,8 @@ if Config.Settings.Framework == "QB" then
         local src = source
         local Player = QBCore.Functions.GetPlayer(src)
         if Player.Functions.GetItemByName(item.name) then
-            TriggerEvent('Wrapper:Log_Stinger',src,DiscordWebHook,'Used Spikes')
             TriggerClientEvent('bbv-spikes:spike',src)
+            TriggerEvent('Wrapper:Log_Stinger',src,DiscordWebHook,'Used Spikes')
         end
     end)
 end
@@ -28,15 +28,15 @@ end
 if Config.Settings.Framework == "ESX" then 
     ESX.RegisterUsableItem(Config.Settings.ItemName, function(source)
         local src = source
-        TriggerEvent('Wrapper:Log_Stinger',src,DiscordWebHook,'Used Spikes')
         TriggerClientEvent('bbv-spikes:spike',src)
+        TriggerEvent('Wrapper:Log_Stinger',src,DiscordWebHook,'Used Spikes')
     end)
 end
 
 if Config.Settings.Framework == "ST" then 
     RegisterCommand(Config.Settings.ItemName, function(source)
         local src = source
-        TriggerEvent('Wrapper:Log_Stinger',src,DiscordWebHook,'Used Spikes')
         TriggerClientEvent('bbv-spikes:spike',src)
+        TriggerEvent('Wrapper:Log_Stinger',src,DiscordWebHook,'Used Spikes')
     end)
 end
